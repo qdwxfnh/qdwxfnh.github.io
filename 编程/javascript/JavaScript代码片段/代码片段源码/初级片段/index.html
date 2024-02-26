@@ -1,0 +1,41 @@
+<view class="prodBox" wx:for="{{currentItems}}" wx:key="index" bind:tap="goProductionsDetail" data-id="{{item._id}}">
+	<t-badge wx:if="{{index<20}}" count="{{index<10?'新品':index<20?'热销':''}}" offset="{{[0, 0]}}" shape="ribbon" slot="note" />
+	<image src="{{item.thumbnail}}" mode="" class="prodImg"  lazy-load />
+	<view class="prodInfo" bind:tap="goProductionsDetail" data-id="{{item._id}}">
+		<view class="prodTitle">{{item.description}}</view>
+		<view class="size"> <text class="sizeTxt">规格：</text> 口径 {{item.diameter || "??"}}cm 高 {{item.height || "??"}}cm 容积 {{item.volume || "??"}}ml</view>
+		<view class="price">        
+			<block wx:if="{{userInfo.role=='admin'}}">
+				<view class="salePrice"><text class="priceTxt">成本价￥</text>{{item.costPrice || purchaseList.fnFix(item.price*0.6, 0) || "待定"}}</view>
+			</block>
+			<block wx:else>
+				<view class="salePrice emptyPrice"></view>
+			</block>
+			<block wx:if="{{userInfo.role!='guest'}}">
+				<view class="salePrice"><text class="priceTxt">批发价￥</text>{{item.wholesalePrice || purchaseList.fnFix(item.price*0.7, 0) || "待定"}}</view>
+			</block>
+			<block wx:else>
+				<view class="salePrice emptyPrice"></view>
+			</block>
+			<view class="salePrice"><text class="priceTxt">零售价￥</text>{{item.price || "待定"}}</view>
+		</view>
+	</view>
+	<view class="userProd">
+		<view class="like" bind:tap="changeFav" data-id="{{item._id}}">
+			<text class="likeTxt"> 收藏</text>    
+			<block wx:if="{{purchaseList.fnJudgeFav(item._id, favProduct)==-1}}">
+				<t-icon name="heart-filled" size="24rpx" color="#cc163a" />      
+			</block>
+			<block wx:else>
+				<t-icon name="heart" size="24rpx" color="#666" />
+			</block>
+		</view>
+		<block wx:if="{{purchaseNum[item._id]}}">
+			<text class="purchaseTxt">采购数</text>
+			<t-stepper max="9999" theme="filled" t-class-minus="minus" t-class-plus="plus" t-class-input="input" value="{{purchaseNum[item._id] || 0}}" data-id="{{item._id}}" bind:change="handleChange" />
+		</block>
+		<block wx:else>
+			<view class="addCart" bind:tap="addCart" data-id="{{item._id}}">加入采购车</view>
+		</block>
+	</view>
+</view>

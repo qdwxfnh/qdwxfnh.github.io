@@ -1,0 +1,25 @@
+{
+  "value": "0",
+  "list": [
+    {
+      "id": 0,
+      "name": "a"
+    },
+    {
+      "id": 1,
+      "name": "b"
+    },
+    {
+      "id": 2,
+      "name": "c"
+    }
+  ],
+  "__webviewId__": 179,
+  "isRegister": true,
+  "userInfo": {
+    "avatar": "cloud://cloud1-4gmzuftg6502819f.636c-cloud1-4gmzuftg6502819f-1318106492/纬 1706540791251.jpg",
+    "openId": "olVNF486WZ7LoxVT5pwN7yv5ZpRE",
+    "nickName": "纬 ",
+    "role": "Cpartner"
+  }
+}

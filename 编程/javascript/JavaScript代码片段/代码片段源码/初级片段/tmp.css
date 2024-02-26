@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('SOURCEHANSANSCN-REGULAR.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('SOURCEHANSANSCN-REGULAR.woff') format('woff'), /* 所有现代浏览器 */
+       url('loli.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('SOURCEHANSANSCN-REGULAR.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'MyFont2';
+  src: url('SOURCEHANSANSCN-REGULAR.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('SOURCEHANSANSCN-REGULAR.woff') format('woff'), /* 所有现代浏览器 */
+       url('YouSheYuFeiTeJianKangTi-2.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('SOURCEHANSANSCN-REGULAR.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+.container  {
+  width: 380px;
+  padding: 20px;
+  /* height: 100px; */
+  margin: 0 auto;
+  background-color: #303030;
+  font-family: 'MyFont';
+  /* box-sizing:border-box; */
+}
+
+.roadSign {
+  background-color: #c7a781;
+  width: 380px;
+  height: 140px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.content {
+  padding: 10px 15px;
+  color:#977250;
+}
+
+.up {
+  display: flex;
+  font-size: 38px;
+  border-bottom: 3px #977250 solid;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  align-items: flex-end;
+}
+
+.left, .right, .left1, .right1 {
+  margin: 5px;
+}
+
+.center {
+  font-size: 55px;
+  text-align-last:justify;
+	text-align:justify;
+	text-justify:distribute-all-lines; 
+  width: 225px;
+  /* text-align-last: justify;
+  text-align: justify;
+  text-justify: distribute-all-lines; */
+}
+
+.center1 {
+  font-size: 55px;
+  /* text-align-last:justify;
+	text-align:justify;
+	text-justify:distribute-all-lines;  */
+  width: 180px;
+  text-align-last: justify;
+  text-align: justify;
+  text-justify: distribute-all-lines;
+}
+
+.down {
+  /* padding-top: 3px; */
+  display: flex;
+  font-size: 36px;
+  justify-content: space-between;
+  font-family: '黑体';
+  align-items: center;
+
+}
+
+.down1 {
+  margin-top: -3px;
+  display: flex;
+  font-size: 36px;
+  justify-content: space-between;
+  font-family: '黑体';
+  align-items: center;
+
+}
+
+.down_center {
+  text-align-last:justify;
+	text-align:justify;
+	text-justify:distribute-all-lines; 
+  width: 305px;
+}
+
+.down_center1 {
+
+  text-align-last:justify;
+	text-align:justify;
+	text-justify:distribute-all-lines; 
+  width: 220px;
+  line-height: 30px;
+}
+
+.readme {
+  font-size: 40px;
+  color: #fff;
+}
+
+实训基地和课程
